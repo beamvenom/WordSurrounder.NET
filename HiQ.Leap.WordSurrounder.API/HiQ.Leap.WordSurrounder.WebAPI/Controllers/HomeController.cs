@@ -12,48 +12,37 @@ namespace HiQ.Leap.WordSurrounder.WebAPI.Controllers
         [HttpGet]
         public IActionResult Index() 
         {
-            System.Diagnostics.Debug.WriteLine("this is text: ");
             return Ok("Server is up and running!");
         }
 
         [HttpPost]
         public JsonString ProcessFile([FromBody] JsonString jsonString)
         {;
-            //JsonString processedText = new JsonString(ProcessText(jsonString.text));
-            //System.Diagnostics.Debug.WriteLine("this is text: " + processedText.text);
             return new JsonString(ProcessText(jsonString.text));
         }
         private string ProcessText(string text)
         {
-            try
+            if(text != null)
             {
-                if(text != null)
+                string onlyText = Regex.Replace(text, @"[^\w\s\-]*", "");
+                var mostFrequentWord = Regex.Split(onlyText.ToLower(), @"\W+")
+                    .Where(word => !word.Contains("_"))
+                    .GroupBy(x => x)
+                    .OrderByDescending(x => x.Count())
+                    .First().Key;
+                var mostFrequentWordAllCases = Regex.Split(onlyText, @"\W+")
+                    .Where(word => string.Equals(word,mostFrequentWord,StringComparison.CurrentCultureIgnoreCase)).Distinct().ToList();
+                string processedText = Regex.Replace(text, @"\b" + mostFrequentWord + @"\b", "foo" + mostFrequentWord + "bar");
+                foreach (var word in mostFrequentWordAllCases)
                 {
-                    string onlyText = Regex.Replace(text, @"[^\w\s\-]*", "");
-                    var mostFrequentWord = Regex.Split(onlyText.ToLower(), @"\W+")
-                     .Where(word => !word.Contains("_"))
-                     .GroupBy(x => x)
-                     .OrderByDescending(g => g.Count())
-                     .First().Key;
-                    var mostFrequentWordAllCases = Regex.Split(onlyText, @"\W+")
-                        .Where(word => string.Equals(word,mostFrequentWord,StringComparison.CurrentCultureIgnoreCase)).Distinct().ToList();
-                    string processedText = Regex.Replace(text, @"\b" + mostFrequentWord + @"\b", "foo" + mostFrequentWord + "bar");
-                    foreach (var word in mostFrequentWordAllCases)
-                    {
-                        System.Diagnostics.Debug.WriteLine("this is word: " + word);
-                        processedText = Regex.Replace(text, @"\b" + word + @"\b", "foo" + word + "bar");
-                        text = processedText;
-                    }
-                    return processedText;
+                    processedText = Regex.Replace(text, @"\b" + word + @"\b", "foo" + word + "bar");
+                    text = processedText;
                 }
-                else
-                {
-                    return "ERROR: text is null";
-                }
+                return processedText;
             }
-            catch(Exception e)
+            else
             {
-                return e.Message;
+                return "Error: text is null";
             }
         }
     }

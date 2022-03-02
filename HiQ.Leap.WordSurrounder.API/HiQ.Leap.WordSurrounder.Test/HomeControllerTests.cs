@@ -27,7 +27,7 @@ namespace HiQ.Leap.WordSurrounder.Test
         [InlineData("", "")]                                                                                            //test empty string
         [InlineData("the_the ok ok", "the_the foookbar foookbar")]                                                      //test underscore combined
         [InlineData("__the__ _the the_ the ok ok ok ok", "__the__ _the the_ the foookbar foookbar foookbar foookbar")]  //test underscore separate
-        [InlineData(null, "ERROR: text is null")]                                                                       //test null
+        [InlineData(null, "Error: text is null")]                                                                       //test null
         public void TestProcessFile(string input, string expected)
         {
             var result = controller.ProcessFile(new JsonString(input));
