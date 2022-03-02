@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HiQ.Leap.WordSurrounder.API",
+    "\\HiQ.Leap.WordSurrounder.API\\HiQ.Leap.WordSurrounder.WebAPI",
+    "\\HiQ.Leap.WordSurrounder.API\\HiQ.Leap.WordSurrounder.WebAPI\\Controllers"
+  ],
+  "SelectedNode": "\\HiQ.Leap.WordSurrounder.API\\HiQ.Leap.WordSurrounder.WebAPI\\Controllers\\HomeController.cs",
+  "PreviewInSolutionExplorer": false
+}

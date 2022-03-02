@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<pre
+  align="center"
+  data-testid="showText"
+  id="showText"
+>
+  Processed text will be printed here!
+</pre>
+`;

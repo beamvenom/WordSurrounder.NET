@@ -1,0 +1,7 @@
+# Backend
+.idea
+__pycache__
+
+# Frontend
+node_modules
+.vscode

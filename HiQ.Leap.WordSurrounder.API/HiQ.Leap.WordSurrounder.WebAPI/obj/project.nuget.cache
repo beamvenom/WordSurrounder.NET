@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DDwMaYSaIBN1sRYCyTkqoHtD641lVvGqhjP7bR146TPBBAUwQ/TohW+W0s2sKdegle3icLo6I4hpU1b3gAexFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tony\\Desktop\\HiQLeap\\HiQ.Leap.WordSurrounder.API\\HiQ.Leap.WordSurrounder.WebAPI\\HiQ.Leap.WordSurrounder.WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tony\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Tony\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Tony\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Tony\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Tony\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Tony\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

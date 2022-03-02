@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<section
+  className="sc-bdfBQB isbfYM"
+>
+  <p
+    className="sc-dlfnuX goCNQr"
+    data-testid="uploadText"
+    id="uploadText"
+    type={true}
+  >
+    Upload a text and the most occuring word in the text will be surronded by foo and bar!
+  </p>
+  <button
+    className="sc-hKgJUU AwSXH"
+  >
+    <i
+      className="fas fa-file-upload"
+    />
+    <span
+      data-testid="fileFieldText"
+    >
+       Upload a text file 
+    </span>
+    <input
+      className="sc-gsTEea kuEFkz"
+      data-testid="fileField"
+      onChange={[Function]}
+      type="file"
+    />
+  </button>
+</section>
+`;
