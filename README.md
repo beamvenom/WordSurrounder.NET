@@ -17,15 +17,25 @@ Although it might be a simple program, this project tests one's skills on how to
 - Unit tests both in front-end and back-end
 - Making structured and readable code using the linters.
 
-After all the installations are finished.
-#### 1. Start the back-end through visual studio.
-#### 2. Start the front-end with
+## Prerequisites
+- Visual Studio (with .NET 5 installed) 
+- Node.js
+
+## Usage
+#### 1. Run the .sln file in HiQ.Leap.WordSurrounder.API with Visual Studio.
+#### 2. For the front-end
+```bash
+cd HiQ.Leap.WordSurrounder.Web
+```
+```bash
+npm install
+```
 ```bash
 npm start
 ```
 #### Now the program should be running!
 - If a website did not start. Open up http://localhost:3000/ and you should be greeted with a page with a button.
-- <p align="center">
+<p align="center">
 <img src="https://github.com/beamvenom/word_surrounder/blob/main/images/screenshot3.png?raw=true" />
 </p>
 - Pressing the blue/white button will prompt a file upload. 
