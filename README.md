@@ -5,7 +5,7 @@
 
 
 This project is to create a program that reads a text file and surrounds every occurence of the most used word in the text with "foo" and "bar".
-Check out the Python version: https://raw.githubusercontent.com/beamvenom/word_surrounder.
+Check out the Python version: https://github.com/beamvenom/word_surrounder.
 
 For example, if you input a text file with this text: "The therapist is the hero." 
 The program will print out "fooThebar therapist is foothebar hero"
